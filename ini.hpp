@@ -58,7 +58,7 @@ inline void
 Parser::err(const char* s)
 {
   char buf[256];
-  sprintf(buf, "%s on line #%ld", s, ln_);
+  snprintf(buf, sizeof buf, "%s on line #%ld", s, ln_);
   throw std::runtime_error(buf);
 }
 
